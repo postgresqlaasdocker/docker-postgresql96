@@ -1,7 +1,7 @@
 FROM frodenas/ubuntu
 MAINTAINER Ferran Rodenas <frodenas@gmail.com>
 
-# Install PostgreSQL 9.4
+# Installing PostgreSQL 9.4
 RUN DEBIAN_FRONTEND=noninteractive \
     cd /tmp && \
     wget https://www.postgresql.org/media/keys/ACCC4CF8.asc && \
