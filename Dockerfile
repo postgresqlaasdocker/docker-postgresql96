@@ -1,7 +1,7 @@
 FROM frodenas/ubuntu
 MAINTAINER Ferran Rodenas <frodenas@gmail.com>
 
-# Installing PostgreSQL 9.4
+# Installing PostgreSQL 9.6
 RUN DEBIAN_FRONTEND=noninteractive \
     cd /tmp && \
     wget https://www.postgresql.org/media/keys/ACCC4CF8.asc && \
@@ -9,7 +9,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" | tee /etc/apt/sources.list.d/pgdg.list && \
     apt-get update && \
     apt-get install -y --force-yes \
-    postgresql-9.4 postgresql-client-9.4 postgresql-contrib-9.4 runit && \
+    postgresql-9.6 postgresql-client-9.6 postgresql-contrib-9.6 runit && \
     service postgresql stop && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
