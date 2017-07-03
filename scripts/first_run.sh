@@ -7,7 +7,7 @@ DATA_DIR=/data/postgres
 
 cd /var/lib/postgresql
 # Start PostgreSQL service
-sudo -u postgres /usr/lib/postgresql/9.4/bin/postgres -D $DATA_DIR &
+sudo -u postgres /usr/lib/postgresql/9.6/bin/postgres -D $DATA_DIR &
 
 while ! sudo -u postgres psql -q -c "select true;"; do sleep 1; done
 
@@ -38,7 +38,7 @@ EOF
 fi
 
 # Stop PostgreSQL service
-sudo -u postgres /usr/lib/postgresql/9.4/bin/pg_ctl stop -m fast -w -D $DATA_DIR
+sudo -u postgres /usr/lib/postgresql/9.6/bin/pg_ctl stop -m fast -w -D $DATA_DIR
 
 echo "========================================================================"
 echo "PostgreSQL User: \"$USER\""
