@@ -1,7 +1,7 @@
 FROM srinivasachalla/docker-ubuntu
 MAINTAINER Sunidhi Sharma <sunidhi.sharma@sap.com>
 
-## Install wget
+# Install wget
 RUN apt-get install wget
 
 # Installing PostgreSQL 9.6
@@ -16,7 +16,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     service postgresql stop && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-## remove wget
+# remove wget
 RUN apt-get remove wget -y
 
 # Add scripts
