@@ -5,7 +5,6 @@ DB=${POSTGRES_DBNAME:-}
 EXTENSIONS=${POSTGRES_EXTENSIONS:-}
 DATA_DIR=/data/postgres
 
-#cd /var/lib/postgresql
 # Start PostgreSQL service
 sudo -i -u postgres /usr/lib/postgresql/9.6/bin/postgres -D $DATA_DIR &
 

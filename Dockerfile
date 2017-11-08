@@ -20,9 +20,10 @@ RUN DEBIAN_FRONTEND=noninteractive \
     make -j${CPUS} world && make install-world && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# remove wget
+# Remove wget
 RUN apt-get remove wget -y
 
+# Install runit
 RUN apt-get update && \
     apt-get install -y --force-yes runit
 
