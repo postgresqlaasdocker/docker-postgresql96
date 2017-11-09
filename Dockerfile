@@ -5,7 +5,7 @@ MAINTAINER Sunidhi Sharma <sunidhi.sharma@sap.com>
 RUN apt-get update && \
     apt-get install wget
 
-# Installing PostgreSQL 9.6
+## Installing PostgreSQL 9.6
 RUN DEBIAN_FRONTEND=noninteractive \
     cd /tmp && \
     wget https://ftp.postgresql.org/pub/source/v9.6.4/postgresql-9.6.4.tar.gz && \
