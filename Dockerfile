@@ -8,9 +8,9 @@ RUN apt-get update && \
 ## Installing PostgreSQL 9.6
 RUN DEBIAN_FRONTEND=noninteractive \
     cd /tmp && \
-    wget https://ftp.postgresql.org/pub/source/v9.6.4/postgresql-9.6.4.tar.gz && \
-    tar xfv postgresql-9.6.4.tar.gz && \
-    cd postgresql-9.6.4 && \
+    wget https://ftp.postgresql.org/pub/source/v9.6.5/postgresql-9.6.5.tar.gz && \
+    tar xfv postgresql-9.6.5.tar.gz && \
+    cd postgresql-9.6.5 && \
     apt-get install libssl-dev -y && \
     apt-get install libreadline6 libreadline6-dev && \
     apt-get install libxml2-dev -y && \
