@@ -1,5 +1,5 @@
 FROM srinivasachalla/docker-ubuntu
-MAINTAINER Sunidhi Sharma <sunidhi.sharma@sap.com>
+MAINTAINER Vinayak Jadhav <vinayak.jadhav@sap.com>
 
 # Install wget
 RUN apt-get update && \
