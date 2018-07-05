@@ -14,8 +14,9 @@ RUN DEBIAN_FRONTEND=noninteractive \
     apt-get install libssl-dev -y && \
     apt-get install libreadline6 libreadline6-dev && \
     apt-get install libxml2-dev -y && \
+    apt-get install uuid-dev -y && \
     mkdir -p /usr/lib/postgresql/9.6/ && \
-    ./configure --with-openssl --with-libxml --prefix=/usr/lib/postgresql/9.6/ && \
+    ./configure --with-openssl --with-libxml --with-uuid=e2fs --prefix=/usr/lib/postgresql/9.6/ && \
     export CPUS=$(grep -c ^processor /proc/cpuinfo) && \
     make -j${CPUS} world && make install-world && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
