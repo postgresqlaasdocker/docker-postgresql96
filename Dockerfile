@@ -1,5 +1,5 @@
 FROM srinivasachalla/docker-ubuntu
-MAINTAINER Vinayak Jadhav <vinayak.jadhav@sap.com>
+MAINTAINER Gouranga Murari <gouranga.murari@sap.com>
 
 # Install wget
 RUN apt-get update && \
@@ -8,9 +8,9 @@ RUN apt-get update && \
 # Installing PostgreSQL 9.6
 RUN DEBIAN_FRONTEND=noninteractive \
     cd /tmp && \
-    wget https://ftp.postgresql.org/pub/source/v9.6.10/postgresql-9.6.10.tar.gz && \
-    tar xfv postgresql-9.6.10.tar.gz && \
-    cd postgresql-9.6.10 && \
+    wget https://ftp.postgresql.org/pub/source/v9.6.12/postgresql-9.6.12.tar.gz && \
+    tar xfv postgresql-9.6.12.tar.gz && \
+    cd postgresql-9.6.12 && \
     apt-get install libssl-dev -y && \
     apt-get install libreadline6 libreadline6-dev && \
     apt-get install libxml2-dev -y && \
